@@ -4,8 +4,10 @@
   "main": "dist/src/main",
   "scripts": {
     "build": "nest build",
-    "start:dev": "nest start --watch",
-    "start:prod": "node ."
+    "start:dev": "cross-env NODE_ENV=development nest start --watch",
+    "start:debug": "cross-env NODE_ENV=development nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "typeorm": "cross-env NODE_ENV=development node --require ts-node/register ./node_modules/typeorm/cli.js"
   },
   "keywords": [],
   "author": "Gabriel Aguiar",
@@ -13,14 +15,22 @@
   "description": "",
   "dependencies": {
     "@nestjs/common": "^11.0.12",
+    "@nestjs/config": "^4.0.1",
     "@nestjs/core": "^11.0.12",
     "@nestjs/platform-express": "^11.0.12",
-    "reflect-metadata": "^0.2.2"
+    "@nestjs/typeorm": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "mysql2": "^3.14.0",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.21"
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.5",
     "@nestjs/schematics": "^11.0.2",
     "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.2"
   }
 }

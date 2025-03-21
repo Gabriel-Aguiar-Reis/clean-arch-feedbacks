@@ -3,3 +3,5 @@ yarn.lock
 *.rest
 dist
 settings.json
+.env*
+*.sqlite
