@@ -15,6 +15,7 @@
       "@/*": ["./*"]
     },
     "skipLibCheck": true,
-    "incremental": true
+    "incremental": true,
+    "allowJs": true
   }
 }
