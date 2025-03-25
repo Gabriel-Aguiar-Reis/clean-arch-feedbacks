@@ -1,0 +1,9 @@
+node_modules
+yarn.lock
+*.rest
+dist
+settings.json
+.env*
+*.sqlite
+next-env.d.ts
+.next
