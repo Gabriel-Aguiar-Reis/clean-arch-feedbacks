@@ -70,7 +70,7 @@ npm run dev
 
 ## 🛠 Ongoing Tasks
 
-- [ ] Initial configuration of NestJS and Next.js
+- [x] Initial configuration of NestJS and Next.js
 
 - [ ] Implementation of the main entities (User, Feedback)
 
