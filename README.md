@@ -25,24 +25,26 @@
 - SOLID Principles  
 - Design Patterns
 
-## 📂 Project Structure
+## 📂 Basic Project Structure
 
 ```bash
 backend/
 │── src/
 │   ├── application/         # Use Cases
+│   ├── config/              # App configurations
 │   ├── domain/              # Entities and repository interfaces
 │   ├── infrastructure/      # Repository implementations and external services
 │   ├── presentation/        # Controllers and DTOs
-│   ├── main.ts              # Main file of NestJS
 │
 frontend/
 │── src/
+│   ├── app/                 # Next.js routes
 │   ├── components/          # Reusable components
-│   ├── pages/               # Next.js routes
 │   ├── services/            # API communication
 │   ├── styles/              # Styling (Tailwind)
-│   ├── app.tsx              # Main file of Next.js
+│── .env                     # Enviroment variables
+│── .gitignore
+│── README.md                # This file! :)
 ```
 
 ## 🚀 How to Run the Project
@@ -68,11 +70,11 @@ npm run dev
 
 ## 🛠 Ongoing Tasks
 
-- [ ] Initial configuration of NestJS and Next.js
+- [x] Initial configuration of NestJS and Next.js
 
 - [ ] Implementation of the main entities (User, Feedback)
 
-- [ ] Development of use cases (Create Feedback, Get Feedbacks)
+- [ ] Development of use cases
 
 - [ ] Setup anonymous feedback API
 
