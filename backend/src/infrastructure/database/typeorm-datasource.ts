@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm'
-import { UserOrmEntity } from '../persistence/typeorm/user/user.orm-entity'
-import { FeedbackOrmEntity } from '../persistence/typeorm/feedback/feedback.orm-entity'
+import { UserOrmEntity } from '@/infrastructure/persistence/typeorm/user/user.orm-entity'
+import { FeedbackOrmEntity } from '@/infrastructure/persistence/typeorm/feedback/feedback.orm-entity'
 
 const commonConfig = {
   entities: [UserOrmEntity, FeedbackOrmEntity],

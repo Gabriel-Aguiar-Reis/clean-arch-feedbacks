@@ -1,5 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common'
-import { CreateFeedbackDto } from './dtos/create-feedback.dto'
+import { CreateFeedbackDto } from '@/presentation/feedback/dtos/create-feedback.dto'
 import { CreateFeedbackUseCase } from '@/application/feedback/use-cases/create-feedback.use-case'
 
 @Controller('feedbacks')
