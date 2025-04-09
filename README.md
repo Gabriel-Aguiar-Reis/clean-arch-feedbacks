@@ -72,7 +72,7 @@ npm run dev
 
 - [x] Initial configuration of NestJS and Next.js
 
-- [ ] Implementation of the main entities (User, Feedback)
+- [x] Implementation of the main entities (User, Feedback)
 
 - [ ] Development of use cases
 
