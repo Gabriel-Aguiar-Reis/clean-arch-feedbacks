@@ -4,7 +4,11 @@ const config: Config = {
   preset: 'ts-jest/presets/default',
   testEnvironment: 'node',
   moduleFileExtensions: ['ts', 'js', 'json'],
-  testMatch: ['**/__tests__/**/*.spec.ts'],
+  testMatch: [
+    '**/test/unit/**/*.spec.ts',
+    '**/test/integration/**/*.spec.ts',
+    '**/test/e2e/**/*.spec.ts'
+  ],
   transform: {
     '^.+\\.ts$': [
       'ts-jest',
