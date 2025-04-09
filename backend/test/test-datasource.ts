@@ -1,10 +1,11 @@
+import { FeedbackOrmEntity } from '@/infrastructure/persistence/typeorm/feedback/feedback.orm-entity'
+import { UserOrmEntity } from '@/infrastructure/persistence/typeorm/user/user.orm-entity'
 import { DataSource } from 'typeorm'
-import { User } from '@/domain/entities/user.entity'
 
 export const testDataSource = new DataSource({
   type: 'sqlite',
   database: ':memory:',
-  entities: [User],
+  entities: [FeedbackOrmEntity, UserOrmEntity],
   synchronize: true,
   logging: false
 })

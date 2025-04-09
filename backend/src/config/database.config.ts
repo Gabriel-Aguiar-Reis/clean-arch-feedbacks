@@ -27,6 +27,6 @@ export const databaseConfig = (
     type: 'sqlite',
     database: env === 'test' ? 'test.sqlite' : 'db.sqlite',
     entities,
-    synchronize: false
+    synchronize: true
   }
 }
