@@ -17,9 +17,6 @@
 ![PostgreSQL](https://img.shields.io/badge/postgreSQL-brightgreen?style=for-the-badge&logo=postgresql&logoColor=white&color=172554)
 ![SQLite](https://img.shields.io/badge/SQLite-brightgreen?style=for-the-badge&logo=sqlite&logoColor=white&color=172554)
 
-### 🔐 Authentication:
-- JWT (JSON Web Token)
-
 ### 🚀 Architecture:
 - Clean Architecture  
 - SOLID Principles  
