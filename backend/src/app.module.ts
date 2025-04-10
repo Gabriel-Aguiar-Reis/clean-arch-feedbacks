@@ -19,6 +19,13 @@ import { FeedbackController } from '@/presentation/feedback/feedback.controller'
 import { AppConfigService } from '@/config/app-config.service'
 import { ConfigService } from '@nestjs/config'
 
+import { DeleteUserUseCase } from '@/application/user/use-cases/delete-user.use-case'
+import { DeleteFeedbackUseCase } from '@/application/feedback/use-cases/delete-feedback.use-case'
+
+import { UpdateFeedbackUseCase } from '@/application/feedback/use-cases/update-feedback.use-case'
+
+import { GetUsersUseCase } from '@/application/user/use-cases/get-users.use-case'
+import { GetFeedbacksUseCase } from '@/application/feedback/use-cases/get-feedbacks.use-case'
 @Module({
   imports: [
     ConfigModule,
@@ -31,7 +38,12 @@ import { ConfigService } from '@nestjs/config'
   providers: [
     AppConfigService,
     CreateUserUseCase,
+    GetUsersUseCase,
+    DeleteUserUseCase,
+    GetFeedbacksUseCase,
     CreateFeedbackUseCase,
+    DeleteFeedbackUseCase,
+    UpdateFeedbackUseCase,
     { provide: 'UserRepository', useClass: TypeOrmUserRepository },
     { provide: 'FeedbackRepository', useClass: TypeOrmFeedbackRepository }
   ],

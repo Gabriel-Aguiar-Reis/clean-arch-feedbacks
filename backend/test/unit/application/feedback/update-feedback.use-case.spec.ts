@@ -1,11 +1,11 @@
-import { EditFeedbackUseCase } from '@/application/feedback/use-cases/edit-feedback.use-case'
+import { UpdateFeedbackUseCase } from '@/application/feedback/use-cases/update-feedback.use-case'
 import { FeedbackRepository } from '@/domain/repositories/feedback.repository'
 import { Feedback } from '@/domain/entities/feedback.entity'
 import { NotFoundException } from '@nestjs/common'
 
-describe('EditFeedbackUseCase', () => {
+describe('UpdateFeedbackUseCase', () => {
   let repo: jest.Mocked<FeedbackRepository>
-  let useCase: EditFeedbackUseCase
+  let useCase: UpdateFeedbackUseCase
 
   beforeEach(() => {
     repo = {
@@ -14,7 +14,7 @@ describe('EditFeedbackUseCase', () => {
       update: jest.fn()
     } as any
 
-    useCase = new EditFeedbackUseCase(repo)
+    useCase = new UpdateFeedbackUseCase(repo)
   })
 
   it('should update feedback successfully', async () => {
