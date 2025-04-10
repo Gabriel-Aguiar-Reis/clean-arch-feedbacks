@@ -74,9 +74,9 @@ npm run dev
 
 - [x] Implementation of the main entities (User, Feedback)
 
-- [ ] Development of use cases
+- [x] Development of use cases
 
-- [ ] Setup anonymous feedback API
+- [x] Setup anonymous feedback API
 
 - [ ] Design and implement user interface for submitting feedbacks
 
