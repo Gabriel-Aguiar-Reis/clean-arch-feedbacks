@@ -13,7 +13,11 @@ describe('CreateFeedbackUseCase', () => {
         .mockImplementation(
           async (data) =>
             new Feedback(1, data.comment, data.rating, data.userId)
-        )
+        ),
+      findById: jest.fn(),
+      get: jest.fn(),
+      update: jest.fn(),
+      delete: jest.fn()
     }
     useCase = new CreateFeedbackUseCase(repo)
   })

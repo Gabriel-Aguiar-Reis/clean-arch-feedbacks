@@ -12,9 +12,19 @@ export class TypeOrmUserRepository implements UserRepository {
     private readonly ormRepo: Repository<UserOrmEntity>
   ) {}
 
+  async get(): Promise<User[]> {
+    const users = await this.ormRepo.find()
+    return users
+  }
+
   async create(user: Omit<User, 'id'>): Promise<User> {
     const ormUser = this.ormRepo.create(user)
     const saved = await this.ormRepo.save(ormUser)
     return new User(saved.id, saved.firstName, saved.lastName)
+  }
+
+  async delete(id: number): Promise<boolean> {
+    const result = await this.ormRepo.delete(id)
+    return result.affected !== 0
   }
 }
