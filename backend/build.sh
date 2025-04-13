@@ -14,4 +14,4 @@ yarn install
 yarn build
 
 # Roda as migrations do TypeORM
-yarn typeorm migration:run
+yarn migration:run
