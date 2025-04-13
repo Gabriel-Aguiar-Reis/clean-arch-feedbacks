@@ -2,6 +2,8 @@
 
 <p align="center">Clean Arch Feedbacks is a Full-Stack NestJS/Next.js repository aimed at developing an anonymous feedback system. The project leverages Clean Architecture, SOLID principles, and Design Patterns to ensure modularity, scalability, and maintainability.</p>
 
+<p align="center">You can access in https://clean-arch-feedbacks.vercel.app/</p>
+
 ## 📌 Technologies Used
 
 ### 🏗 Backend:
@@ -75,7 +77,7 @@ npm run dev
 
 - [x] Setup anonymous feedback API
 
-- [ ] Design and implement user interface for submitting feedbacks
+- [x] Design and implement user interface for submitting feedbacks
 
 ## 🤝 Contributing
 
