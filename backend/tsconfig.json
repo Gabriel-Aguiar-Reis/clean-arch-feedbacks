@@ -10,10 +10,10 @@
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./",
-    "baseUrl": "src/",
+    "baseUrl": "./src",
     "isolatedModules": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["*"]
     },
     "skipLibCheck": true,
     "incremental": true,

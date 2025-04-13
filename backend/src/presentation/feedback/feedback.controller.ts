@@ -26,7 +26,7 @@ export class FeedbackController {
   @Get()
   async get() {
     const feedbacks = await this.getFeedbacksUseCase.execute()
-    return { feedbacks }
+    return feedbacks
   }
 
   @Post()
