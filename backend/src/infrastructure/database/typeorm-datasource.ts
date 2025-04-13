@@ -8,7 +8,7 @@ import { SeedUsers1712938540000 } from '@/infrastructure/database/migrations/171
 const commonConfig = {
   entities: [UserOrmEntity, FeedbackOrmEntity],
   migrations: [CreateUsers1712938000000, CreateFeedbacks1712938000001, SeedUsers1712938540000],
-  synchronize: true
+  synchronize: false
 }
 
 let AppDataSource: DataSource
