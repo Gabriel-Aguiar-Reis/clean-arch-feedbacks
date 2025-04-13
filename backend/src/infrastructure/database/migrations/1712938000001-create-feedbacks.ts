@@ -4,7 +4,7 @@ export class CreateFeedbacks1712938000001 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(`
       CREATE TABLE "feedbacks" (
-        "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         "comment" TEXT NOT NULL,
         "rating" INTEGER NOT NULL,
         "userId" INTEGER NOT NULL,
