@@ -18,6 +18,9 @@
     "migration:generate": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -d src/infrastructure/database/typeorm-datasource.ts",
     "migration:run": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d src/infrastructure/database/typeorm-datasource.ts",
     "migration:revert": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:revert -d src/infrastructure/database/typeorm-datasource.ts",
+    "prod:migration:generate": "cross-env NODE_ENV=production ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -d src/infrastructure/database/typeorm-datasource.ts",
+    "prod:migration:run": "cross-env NODE_ENV=production ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d src/infrastructure/database/typeorm-datasource.ts",
+    "prod:migration:revert": "cross-env NODE_ENV=production ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:revert -d src/infrastructure/database/typeorm-datasource.ts",
     "seed": "cross-env NODE_ENV=test ts-node src/infrastructure/database/seed.ts",
     "reset:test": "rm -f test.sqlite && yarn migration:run && yarn test:seed"
   },
