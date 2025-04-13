@@ -34,14 +34,11 @@ export class SeedUsers1712938540000 implements MigrationInterface {
     ]
 
     for (const user of users) {
-      await queryRunner.query(
-        `INSERT INTO "users" (id, firstName, lastName, description) VALUES (?, ?, ?, ?)`,
-        [user.id, user.firstName, user.lastName, user.description]
-      )
+      await queryRunner.manager.insert('users', user)
     }
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`DELETE FROM "user" WHERE id IN (1, 2, 3, 4)`)
+    await queryRunner.query(`DELETE FROM "users" WHERE id IN (1, 2, 3, 4)`)
   }
 }
