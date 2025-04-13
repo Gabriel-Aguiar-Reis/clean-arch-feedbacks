@@ -8,7 +8,7 @@ async function bootstrap() {
   app.useGlobalFilters(new GlobalExceptionFilter())
   const config = app.get(ConfigService)
   const port = config.get<number>('PORT') ?? 3000
-  app.enableCors('*')
+  app.enableCors({ origin: '*' })
 
   await app.listen(port)
   console.log(`App running on http://localhost:${port}`)
