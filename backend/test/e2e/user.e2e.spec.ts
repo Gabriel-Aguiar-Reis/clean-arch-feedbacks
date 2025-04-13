@@ -23,10 +23,11 @@ describe('Users (e2e)', () => {
   it('should create user via POST /users', async () => {
     const res = await request(app.getHttpServer()).post('/users').send({
       firstName: 'Alice',
-      lastName: 'Test'
+      lastName: 'Test',
+      description: ''
     })
 
     expect(res.status).toBe(201)
-    expect(res.body).toMatchObject({ firstName: 'Alice', lastName: 'Test' })
+    expect(res.body).toMatchObject({ firstName: 'Alice', lastName: 'Test', description: '' })
   })
 })

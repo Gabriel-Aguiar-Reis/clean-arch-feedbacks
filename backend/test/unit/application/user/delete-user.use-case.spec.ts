@@ -9,8 +9,9 @@ describe('DeleteUserUseCase', () => {
   beforeEach(() => {
     userRepository = {
       create: jest.fn(),
+      get: jest.fn(),
       delete: jest.fn()
-    } as any
+    }
     useCase = new DeleteUserUseCase(userRepository)
   })
 

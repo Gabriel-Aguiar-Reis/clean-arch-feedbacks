@@ -9,7 +9,7 @@ export class CreateUserUseCase {
     private readonly userRepository: UserRepository
   ) {}
 
-  async execute(input: { firstName: string; lastName: string }): Promise<User> {
+  async execute(input: { firstName: string; lastName: string; description: string }): Promise<User> {
     return this.userRepository.create(input)
   }
 }

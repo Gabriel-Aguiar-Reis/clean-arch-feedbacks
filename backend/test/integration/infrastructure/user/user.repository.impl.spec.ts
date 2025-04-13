@@ -18,10 +18,13 @@ describe('TypeOrmUserRepository (integration)', () => {
   it('should save and return user', async () => {
     const user = await repo.create({
       firstName: 'Ana',
-      lastName: 'Silva'
+      lastName: 'Silva',
+      description: 'A beautiful woman!'
     })
 
     expect(user.id).toBeGreaterThan(0)
     expect(user.firstName).toBe('Ana')
+    expect(user.lastName).toBe('Silva')
+    expect(user.description).toBe('A beautiful woman!')
   })
 })

@@ -15,7 +15,7 @@ export class UserController {
   @Get()
   async get() {
     const users = await this.GetUsersUseCase.execute()
-    return { users }
+    return users
   }
 
   @Post()

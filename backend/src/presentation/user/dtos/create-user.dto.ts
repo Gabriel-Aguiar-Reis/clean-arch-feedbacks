@@ -8,4 +8,8 @@ export class CreateUserDto {
   @IsString()
   @IsNotEmpty()
   lastName: string
+
+  @IsString()
+  @IsNotEmpty()
+  description: string
 }

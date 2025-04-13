@@ -20,7 +20,7 @@ export class TypeOrmUserRepository implements UserRepository {
   async create(user: Omit<User, 'id'>): Promise<User> {
     const ormUser = this.ormRepo.create(user)
     const saved = await this.ormRepo.save(ormUser)
-    return new User(saved.id, saved.firstName, saved.lastName)
+    return new User(saved.id, saved.firstName, saved.lastName, saved.description)
   }
 
   async delete(id: number): Promise<boolean> {

@@ -10,4 +10,7 @@ export class UserOrmEntity {
 
   @Column()
   lastName: string
+
+  @Column()
+  description: string
 }

@@ -23,7 +23,8 @@ export async function setupTestDatabase() {
   for (let i = 0; i < 5; i++) {
     const user = userRepo.create({
       firstName: faker.person.firstName(),
-      lastName: faker.person.lastName()
+      lastName: faker.person.lastName(),
+      description: faker.lorem.sentence()
     })
     users.push(await userRepo.save(user))
   }
