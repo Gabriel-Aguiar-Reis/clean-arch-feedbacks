@@ -5,5 +5,5 @@
   "endOfLine": "auto",
   "singleQuote": true,
   "printWidth": 80,
-  "plugins": ["prettier-plugin-classnames"]
+  "plugins": ["prettier-plugin-classnames", "prettier-plugin-tailwindcss"]
 }

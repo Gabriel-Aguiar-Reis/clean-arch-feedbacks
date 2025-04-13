@@ -1,11 +1,14 @@
+import { CreateFeedbacks1712938000001 } from './migrations/1712938000001-create-feedbacks';
+import { CreateUsers1712938000000 } from './migrations/1712938000000-create-users';
 import { DataSource } from 'typeorm'
 import { UserOrmEntity } from '@/infrastructure/persistence/typeorm/user/user.orm-entity'
 import { FeedbackOrmEntity } from '@/infrastructure/persistence/typeorm/feedback/feedback.orm-entity'
+import { SeedUsers1712938540000 } from '@/infrastructure/database/migrations/1712938540000-seed-users.'
 
 const commonConfig = {
   entities: [UserOrmEntity, FeedbackOrmEntity],
-  migrations: ['src/infrastructure/database/migrations/*.ts'],
-  synchronize: false
+  migrations: [CreateUsers1712938000000, CreateFeedbacks1712938000001, SeedUsers1712938540000],
+  synchronize: true
 }
 
 let AppDataSource: DataSource
